@@ -1,0 +1,35 @@
+/* Container styles */
+.container-type-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  /* Card styles */
+  .card-type-list {
+    border: 1px solid #ddd;
+    width: 80%;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background-color: #fff;
+  }
+  
+  /* Image styles */
+  .card-type-list img {
+    width: 90%;
+    height: 150px;
+    border-radius: 20px;
+    object-fit: cover;
+    margin: 10px;
+  }
+  
+  /* Title styles */
+  .card-type-list h3 {
+    margin: 10px 0;
+    font-size: 1.2em;
+    color: #333;
+  }
