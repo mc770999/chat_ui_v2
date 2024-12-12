@@ -1,5 +1,7 @@
 import React from "react";
 
+
+
 const MainDetails = ({ startDate, endDate, price, onBuyClick }) => (
   <div
     style={{

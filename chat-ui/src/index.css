@@ -173,6 +173,14 @@ body {
   background: rgba(255, 255, 255, 0.4); 
 }
 
+button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+}
 
 
 

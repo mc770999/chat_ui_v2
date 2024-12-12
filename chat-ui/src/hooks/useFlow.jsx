@@ -1,4 +1,4 @@
-import { useCallback, useEffect } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import useStore from '../zustand/useStore'
 import * as R from 'ramda'
 import { trips } from '../HandllerFiles/TourAttractionHandler'
@@ -30,6 +30,9 @@ const useFlow = () => {
 
   const handleMessage = useCallback(
     async (userMessage) => {
+      // const [cityId, setCityId] = useState("")
+      // const [typeId, setTypeId] = useState("")
+
       if (!searchBarAtBottom) {
         setSearchBarAtBottom(true)
       }
@@ -85,13 +88,7 @@ const useFlow = () => {
     setOptionsTourAttraction(trips)
     addMessage({
       type: 'api',
-      content: (
-        <TripList
-          handleChoice={(trip) => {
-            handleCities(trip)
-          }}
-        />
-      ),
+      content: <TripList />,
     })
   }, [options, user])
 
@@ -103,38 +100,7 @@ const useFlow = () => {
       setOptionsCities(cities)
       addMessage({
         type: 'api',
-        content: (
-          <CityList
-            handleChoice={async (city) => {
-              setPreferredCity(city)
-              await displayOptionDates(city.id)
-            }}
-          />
-        ),
-      })
-    },
-    [options, user]
-  )
-
-  const displayOptionDates = useCallback(
-    async (id) => {
-      const optionalRanges = await fetchCityTypeDates(
-        user.preferredCity.id,
-        user.preferredAttraction.id
-      )
-      const handleDateSelection = ({ startDate, endDate }) => {
-        alert(`Selected range: ${startDate} to ${endDate}`)
-      }
-
-      addMessage({
-        type: 'api',
-        content: (
-          <DateRangeSelector
-            optionalRanges={optionalRanges}
-            onSelect={handleDateSelection}
-            buttonClick={(start, end) => getFlightsList(start, end)}
-          />
-        ),
+        content: <CityList />,
       })
     },
     [options, user]
