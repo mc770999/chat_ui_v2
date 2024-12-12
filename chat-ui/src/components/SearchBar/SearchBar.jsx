@@ -35,7 +35,7 @@ const SearchBar = ({ onSend }) => {
           className={`search-bar-container`} style={{...additional_style}}
         >
         <div className="search-bar">
-          <input
+          <input 
             type="text"
             value={message}
             onChange={onChange}

@@ -1,10 +1,14 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
+import { useStore } from "zustand";
+
+
 
 
 
 const useSearchBar = () => {
     const [message, setMessage] = useState("")
     const [placeholderTxt, setPlaceholderTxt] = useState("Enter your name...")
+    
 
     const clear = () => {
         setMessage("")
@@ -19,7 +23,7 @@ const useSearchBar = () => {
         message,
         onChange,
         clear, 
-        placeholderTxt
+        placeholderTxt,
     }
 }
 

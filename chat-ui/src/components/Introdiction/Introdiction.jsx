@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Introduction = ({ name }) => () =>     {
+function Introduction ({ name })  {
   return (
     <div>
       <h1>Hello {name}, Welcome to TravelBot!</h1>

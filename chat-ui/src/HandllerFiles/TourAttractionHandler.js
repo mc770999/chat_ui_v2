@@ -1,4 +1,4 @@
-const trips = [
+export const trips = [
     {
       id: 1,
       name: 'Ski',

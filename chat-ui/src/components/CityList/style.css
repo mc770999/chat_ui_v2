@@ -1,17 +1,17 @@
 /* Container styles */
 .container-city-list {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    justify-content: center;
-    padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
   }
   
   /* Card styles */
   .card-city-list {
-    width: 250px;
     border: 1px solid #ddd;
-    border-radius: 8px;
+    width: 80%;
+    border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -20,10 +20,11 @@
   
   /* Image styles */
   .card-city-list img {
-    width: 100%;
-    height: 150px;
-    border-radius: 20px;
-    object-fit: cover;
+    width: 90%;
+  height: 150px;
+  border-radius: 15px;
+  object-fit: cover;
+  margin: 10px;
   }
   
   /* Title styles */
@@ -32,3 +33,18 @@
     font-size: 1.2em;
     color: #333;
   }
+
+  .card-city-list-button{
+  border-radius: 15px;
+  padding: 10px 20px;
+  margin: 10px 10px 20px 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition:  box-shadow 500ms ease-in-out;
+  }
+
+
+  .card-city-list-button:hover{
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.341);
+  }
+
