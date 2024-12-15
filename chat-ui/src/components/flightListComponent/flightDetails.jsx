@@ -1,7 +1,5 @@
 import React from "react";
 
-
-
 const MainDetails = ({ startDate, endDate, price, onBuyClick }) => (
   <div
     style={{
@@ -78,7 +76,7 @@ const FlightWayDetails = ({
 
 const FlightDetails = ({ flightData }) => {
   const handleBuyClick = () => {
-    window.open("https://www.example.com/buy-ticket", "_blank");
+    window.open(flightData.url, "_blank");
   };
 
   return (
